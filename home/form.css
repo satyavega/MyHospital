@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --green: #4fcca3;
+    --black: #1a1a1a;
+    --light-color: #3a3f47;
+    --white: #eee;
+    --box-shadow: 0.5rem 0.5rem 0 rgba(22, 160, 133, 0.2);
+    --text-shadow: 0.4rem 0.4rem 0 rgba(0, 0, 0, .2);
+    --border: 0.2rem solid var(--green);
+}
+
+body {
+    background-color: #ccc;
+    padding: 10px 10px 20px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 70%;
+    width: 100%;
+    background: var(--white);
+    box-shadow: var(--box-shadow);
+    padding: 25px 30px;
+    border-radius: 5px;
+}
+
+.container h2 {
+    color: #4fcca3;
+    font-weight: 600;
+    font-size: 2em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    border-bottom: 4px solid var(--light-color);
+    display: inline-block;
+    letter-spacing: 1px;
+}
+
+.container form .sec-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+form .sec-container .input-box {
+    width: calc(100% / 2 - 20px);
+    margin: 20px 0 12px 0;
+}
+
+.sec-container .input-box input,
+.textarea,
+input[type="submit"] {
+    width: 100%;
+    height: 45px;
+    padding: 5px 15px;
+    outline: none;
+    font-weight: 400;
+    border: var(--border);
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: var(--black);
+    background-color: transparent;
+    border-radius: 15px;
+    transition: .5s;
+}
+
+.container form .sec-container .input-box .textarea {
+    width: 210%;
+}
+
+.sec-container .input-box span {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: inline-block;
+    color: var(--black);
+    font-weight: 500;
+    font-size: 16px;
+    Letter-spacing: 1px;
+
+}
+
+.sec-container .input-box input:focus,
+.textarea:focus {
+    border: 3.7px solid #84ffd6;
+    border-bottom-width: 4px;
+    transition: .5s;
+}
+
+.gender h4,
+.layanan h4 {
+    color: var(--black);
+    font-weight: 500;
+    font-size: 2em;
+    text-transform: uppercase;
+    display: inline-block;
+    letter-spacing: 1px;
+}
+
+form .gender .radio,
+.layanan .radio {
+    display: flex;
+    width: 80%;
+    margin: 14px 0;
+    justify-content: space-between;
+}
+
+
+form .gender .radio label,
+form .layanan .radio label {
+    display: flex;
+    align-items: center;
+
+}
+
+form .gender .radio .dot,
+form .layanan .radio .dot {
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background: #d9d9d9;
+    border: 5px solid transparent;
+    transition: all 0.5s ease;
+}
+
+#dot-1:checked~.radio label .dot-one,
+#dot-2:checked~.radio label .dot-sec,
+#dot-3:checked~.radio label .dot-third {
+    border-color: #d9d9d9;
+    background-color: var(--green);
+}
+
+#dot-4:checked~.radio label .dot-fourth,
+#dot-5:checked~.radio label .dot-five,
+#dot-6:checked~.radio label .dot-six {
+    border-color: #d9d9d9;
+    background-color: var(--green);
+}
+
+
+.radio span:hover {
+    cursor: pointer;
+}
+
+
+form input[type="radio"] {
+    display: none;
+}
+
+.container form .input-box input[type="submit"] {
+    background: #4fcca3;
+    float: right;
+    color: #eee;
+    outline: none;
+    border: none;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-top: 20px;
+}
+
+.container form .input-box input[type="submit"]:hover {
+    background-color: var(--light-color);
+    color: #4fcca3;
+    transition: 0.5s;
+}
